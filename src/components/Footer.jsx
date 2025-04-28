@@ -3,7 +3,7 @@ function Footer () {
     <div className="footer-copyright">
       <div className="container">
       © {new Date().getFullYear()} React ShopCase
-      <a className="grey-text text-lighten-4 right" href="https://Rrilence.github.io/React-shopcase">Repository Rrilence</a>
+      <a className="grey-text text-lighten-4 right" href="https://github.com/Rrilence/React-shopcase" target="_blank" rel="noreferrer">Repository Rrilence</a>
       </div>
     </div>
   </footer>
