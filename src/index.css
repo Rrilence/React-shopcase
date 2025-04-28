@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-image: url(https://media1.tenor.com/m/Lm8EIbkLtkUAAAAC/aesthetic.gif);
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +9,164 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+nav {
+  padding: 0 1rem;
+}
+
+.backGr{
+  background: #490457;
+  background: linear-gradient(180deg,rgba(73, 4, 87, 1) 0%, rgba(63, 9, 121, 1) 35%, rgba(35, 173, 232, 1) 100%);
+}
+
+.backGr1 {
+  background: #490457;
+background: linear-gradient(nulldeg,rgba(73, 4, 87, 1) 0%, rgba(63, 9, 121, 1) 35%, rgba(35, 173, 232, 1) 100%);
+}
+
+.card-action, .active {
+  background: #490457;
+background: linear-gradient(90deg,rgba(73, 4, 87, 1) 0%, rgba(63, 9, 121, 1) 0%, rgba(35, 173, 232, 1) 100%);
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  width: 50rem;
+  max-width: 95%;
+
+  box-shadow: inset -1px 3px 8px 5px #1f87ff 2px 5px 16px 0px #0b325e, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+  animation: show 500ms ease-in-out;
+}
+
+.basket-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.backet-delete {
+  cursor: pointer;
+}
+
+.basket-quantity {
+  cursor: pointer;
+  vertical-align: middle;
+  color: white;
+  background-color: #0b325e;
+  font-size: 20px;
+}
+
+.price {
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.basketDescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quantity{
+  margin-top: 0.5rem;
+  font-size: 14px;
+}
+
+.btn-small {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.7rem;
+}
+
+.pagination {
+  text-align: center;
+}
+.paginate {
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-color: aliceblue;
+  background-color: #c5cae9;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.paginate:focus {
+  background-color: #5410a1;
+}
+
+
+
+
+#toast-container {
+  top: 3rem !important;
+  animation: fade-in 250ms ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
