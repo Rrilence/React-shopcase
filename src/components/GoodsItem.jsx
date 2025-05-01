@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
+
 function GoodsItem(props) {
     const {
         offerId,
@@ -5,8 +8,9 @@ function GoodsItem(props) {
         displayDescription,
         price: {regularPrice},
         displayAssets = [],
-        addOrder = Function.prototype,
     } = props;
+
+    const {addOrder} = useContext(ShopContext)
 
     const full_background = displayAssets.length > 0 ? displayAssets[0].full_background : null;
 
