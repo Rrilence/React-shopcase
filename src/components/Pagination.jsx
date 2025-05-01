@@ -3,20 +3,25 @@ import React from 'react';
 const Pagination = ({ 
   itemsPerPage, 
   totalItems, 
+  currentPage,
   paginate = Function.prototype,
   prevPage = Function.prototype,
   nextPage = Function.prototype,
  }) => {
-const pageNumbers = []
+const pageNumbers = [];
+const totalPage = Math.ceil(totalItems / itemsPerPage);
 
 for (let i=1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
   pageNumbers.push(i)
 }
 
+console.log(currentPage);
+
+
   return ( <div>
     <ul className='pagination'>
      
-      <button className='waves-effect paginate' onClick={() => prevPage()}>&#9668;</button>
+      <button className='waves-effect paginate' onClick={() => prevPage()} disabled={currentPage === 1}>&#9668;</button>
      
       {
         pageNumbers.map(number => (
@@ -26,7 +31,7 @@ for (let i=1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
         ))
       }
       
-      <button className='waves-effect paginate arrow' onClick={() => nextPage()}>&#9658;</button>
+      <button className='waves-effect paginate arrow' onClick={() => nextPage()} disabled={currentPage === totalPage}>&#9658;</button>
 
     </ul>
   </div>

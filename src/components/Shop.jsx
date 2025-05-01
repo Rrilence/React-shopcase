@@ -121,7 +121,7 @@ function Shop() {
             alert && <Alert displayName={alert} closeAlert={closeAlert}/>
         }
         {
-            <Pagination itemsPerPage={itemsPerPage} totalItems={goods.length} paginate={paginate} prevPage={prevPage} nextPage={nextPage}/>
+            <Pagination itemsPerPage={itemsPerPage} currentPage={currentPage} totalItems={goods.length} paginate={paginate} prevPage={prevPage} nextPage={nextPage}/>
         }
     </main>
 }
